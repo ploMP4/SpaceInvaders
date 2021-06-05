@@ -6,8 +6,8 @@
  
  To run the project on your machine first go into the folder and run 
  
- '''pip install -r requirements.txt'''
+ ```pip install -r requirements.txt```
  
  Then run the main.py file
  
- '''python main.py'''
+ ```python main.py```
