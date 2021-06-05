@@ -22,10 +22,13 @@ pygame.display.set_icon(favicon)
 game_font = pygame.font.SysFont("comicsans", 40)
 
 
-def handle_bullets(bullets, dy, sound, enemies):
+def handle_bullets(bullets, dy, sound, enemies, board):
 	for bullet in bullets:
 		bullet.dy += dy
-		if bullet.rect.centery <= 0 or check_collition(bullet.rect, enemies, sound):
+		if check_collition(bullet.rect, enemies, sound):
+			board.score += 1
+			bullets.remove(bullet)
+		elif bullet.rect.centery <= 0:
 			bullets.remove(bullet)
 		bullet.move()
 
@@ -37,6 +40,8 @@ def check_collition(rect, enemies, sound=None):
 				sound.play()
 			enemy.create()
 			return True
+	
+	return False
 
 
 def main():
@@ -101,7 +106,7 @@ def main():
 				space_ship.is_alive = False
 				pygame.mixer.music.stop()
 				sounds.play_music(sounds.start_screen_music)
-			# Checks so enemies dont spawn one inside another
+			# Checks so enemies don't spawn one inside another
 			for enemy in enemies:
 				check_collition(enemy.rect, enemies)
 				enemy.move()
@@ -110,8 +115,8 @@ def main():
 				space_ship.is_shielded = False
 
 
-			handle_bullets(lasers, 6, sounds.laser_hit_sound, enemies)
-			handle_bullets(rockets, 3, sounds.rocket_hit_sound, enemies)
+			handle_bullets(lasers, 6, sounds.laser_hit_sound, enemies, board)
+			handle_bullets(rockets, 3, sounds.rocket_hit_sound, enemies, board)
 
 
 			if pygame.time.get_ticks() - 2000 >= enemy_cooldown:

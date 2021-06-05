@@ -39,11 +39,11 @@ class SpaceShip():
 
 
 	def draw_utils(self):
-		# Draw Lives
+		# Draw Lives UI
 		for i in range(self.lives):
 			win.blit(self.lives_surface, (i * self.lives_surface.get_width() + 10, 20))
 
-		# Draw Shields
+		# Draw Shields UI
 		for i in range(self.shields):
 			win.blit(self.mini_shields_surface, (WIDTH-i *(self.mini_shields_surface.get_width()+5), 20))
 
