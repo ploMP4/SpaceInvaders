@@ -4,7 +4,7 @@
  
  >*//Project is still in development*
  
- To run the project on your machine first go into the folder and run 
+ ## To run the project on your machine first go into the folder and run 
  
  *Windows:* 
  
@@ -14,7 +14,7 @@
  
  #### ```pip3 install -r requirements.txt```
  
- Then run the main.py file
+ ## Then run the main.py file
  
  *Windows:*
  
