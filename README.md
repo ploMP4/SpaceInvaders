@@ -8,18 +8,18 @@
  
  *Windows:* 
  
- ```pip install -r requirements.txt```
+ #### ```pip install -r requirements.txt```
  
  *Linux:*
  
- ```pip3 install -r requirements.txt```
+ #### ```pip3 install -r requirements.txt```
  
  Then run the main.py file
  
  *Windows:*
  
- ```python main.py```
+ #### ```python main.py```
 
 *Linux:*
 
-```python3 main.py```
+#### ```python3 main.py```
