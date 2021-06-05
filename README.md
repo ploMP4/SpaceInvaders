@@ -1,8 +1,8 @@
 # SpaceInvaders-Pygame
  
- !DISCLAIMER: I DO NOT OWN ANY OF THE GRAPHICS AND SOUNDS USED FOR THIS PROJECT
+ ***!DISCLAIMER: I DO NOT OWN ANY OF THE GRAPHICS AND SOUNDS USED FOR THIS PROJECT***
  
- //Project is still in production
+ *//Project is still in production*
  
  To run the project on your machine first go into the folder and run 
  
