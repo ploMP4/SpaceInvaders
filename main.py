@@ -1,7 +1,8 @@
-from game import main
+from game.Game import Game
 import pygame
 
 if __name__ == '__main__':
-	main()
+	game = Game()
+	game.main()
 	pygame.quit()
 
